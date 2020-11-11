@@ -1,0 +1,85 @@
+---
+DeviceTest06:
+  dec: "createpro-batchcredevice-getbatchlist-getbatchinfo-getbatchinfolist-getdevice-deletedevice-deletepro"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: device/batchCreate
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        index: 1
+        count: 2
+      code: 200
+    -
+      url: device/queryBatchList
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code:
+    -
+      url: device/queryBatchInfo
+      method: GET
+      header: {}
+      data:
+        productKey:
+        applyId:
+      code: 2
+    -
+      url: device/queryBatchInfoList
+      method: GET
+      header: {}
+      data:
+        applyId:
+      code: 2
+    -
+      url: device/get
+      method: GET
+      header: {}
+      data:        
+        deviceName: 
+        productKey: 
+      code:  
+    -
+      url: device/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName:
+      code: 200
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: device/queryBatchInfo
+      method: GET
+      header: {}
+      data:
+        productKey:
+        applyId:
+      code: 409

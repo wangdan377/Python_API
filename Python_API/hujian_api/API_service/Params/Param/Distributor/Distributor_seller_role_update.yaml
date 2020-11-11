@@ -1,0 +1,15 @@
+---
+Distributor_seller_role_update:
+  dec: '经销商权限编辑接口'
+  parameters:
+    -
+      url: v1/seller/agent_perm_update
+      data:
+        -
+          token: 13418483933@139.com
+          agentNo:
+          userList:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

@@ -1,0 +1,56 @@
+---
+init_Data:
+  dec: "init"
+  parameters:
+    -
+      url: device/list
+      method: GET
+      header: {}
+      data:
+        deviceName: "apitest_device"
+      code: 
+    -
+      url: device/unbind
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: 
+    -
+      url: device/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code:  
+    -
+      url: product/list
+      method: GET
+      header: {}
+      data:
+        productName:
+      code: 
+    -
+      url: product/cancelReleaseProduct
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 

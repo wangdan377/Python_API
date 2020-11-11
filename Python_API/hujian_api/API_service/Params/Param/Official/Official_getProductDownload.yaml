@@ -1,0 +1,14 @@
+---
+Official_getProductDownload:
+  dec: '官网产品下载查询'
+  parameters:
+    -
+      url: /v1/product_download
+      data:
+        -
+          code*: 13418483933@139.com
+          lang:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

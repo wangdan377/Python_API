@@ -1,0 +1,14 @@
+---
+Distributor_product_video_click_add:
+  dec: '视频加点击量 '
+  parameters:
+    -
+      url: /v1/production/incr_video_click
+      data:
+        -
+          token*:
+          id*:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

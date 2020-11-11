@@ -1,0 +1,17 @@
+---
+CircleBack_tag_addHot:
+  dec: '添加圈子热门tag'
+  parameters:
+    -
+      url: /circle/addCircleHotTag
+      data:
+        -
+          lang:
+          tagname:
+          scope:
+          start:
+          end:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

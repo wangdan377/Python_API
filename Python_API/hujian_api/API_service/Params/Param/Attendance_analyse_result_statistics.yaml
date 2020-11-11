@@ -1,0 +1,10 @@
+---
+Attendance_analyse_result_statistics:
+  dec: 'get 获取考勤分析统计结果'
+  parameters:
+    -
+      url: localhost:4000/api/attendance/analyse/statlist?startDate=2019-12-01&endDate=2019-12-01&userIds=076909244424161396,266734392436273342
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

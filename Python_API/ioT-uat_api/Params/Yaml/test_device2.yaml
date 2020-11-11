@@ -1,0 +1,102 @@
+---
+DeviceTest02:
+  dec: "createpro-createdevice-loginuser-binduser-delete-unbind-getdevice-deletepro"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+        index: "1"
+        nickname: "apitest_device"
+      code: 200
+    -
+      url: https://oauthuat.utcook.com/uaa/oauth/login
+      method: POST
+      header: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": "Basic c3NvLWdhdGV3YXk6c3NvLWdhdGV3YXktc2VjcmV0"
+              }
+      data: 
+        username: iot_owner_test
+        password: Ut123456
+        grant_type: password
+        scope: read
+      code: 200
+    -
+      url: deviceOwner/bind
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        deviceName: apitest_device
+        deviceSecret: 
+        productKey:     
+      code: 200
+    -
+      url: device/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: 409
+    -
+      url: device/unbind
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: 200
+    -
+      url: device/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: 200
+    -
+      url: device/get
+      method: GET
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: 409
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200

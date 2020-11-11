@@ -1,0 +1,21 @@
+---
+Distributor_product_video_update:
+  dec: '视频新增编辑'
+  parameters:
+    -
+      url: /v1/production/video_update
+      data:
+        -
+          token*:
+          id:
+          productionType:
+          videoType:
+          image:
+          video:
+          title:
+          text:
+          sort:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

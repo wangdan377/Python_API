@@ -1,0 +1,13 @@
+---
+Circle_taglist:
+  dec: '标签列表'
+  parameters:
+    -
+      url: /v1/circle/tagList
+      data:
+        -
+          lang:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

@@ -1,0 +1,248 @@
+---
+EdgedevTest01:
+  dec: "createpro-createdevice-getEdge-binddriver-getdriver-setdriver-getdriverconf-binddevice-getdevice-unbinddriver-setdevice-getdeviceconf-deploy-getdeployment-deledeviceconf-getdeviceconf-deledriverconf-getdriverconf-unbinddevice-getdevice-unbinddriver-getdriver-deploy-getdeployment"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat: 0
+        networkType: WIFI
+        productName: apitest_autoEdge
+        productNodeType: 2
+        sub: false
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+        index: "1"
+        nickname: "apitest_device"
+      code: 200
+    -
+      url: device/get
+      method: GET
+      header: {}
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: apitest_device
+    -
+      url: edge/bindDriverToEdgeInstance
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId: 5c3da6b3a87b43b380a91a2f338e4ffd
+        instanceId:
+      code: 200
+    -
+      url: edge/queryEdgeInstanceDriver
+      method: GET
+      header: {}
+      data:
+        instanceId:
+      code: 5c3da6b3a87b43b380a91a2f338e4ffd
+    -
+      url: edge/setEdgeInstanceDriverConfigs
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId: 5c3da6b3a87b43b380a91a2f338e4ffd
+        instanceId:
+        configs:
+        - content: '{"serverIp":"1.1.1.1","serverPort":1998,"tlsSwitch":0}'
+          format: JSON
+          key: abcd
+      code: 200
+    -
+      url: edge/batchGetEdgeInstanceDriverConfigs
+      method: GET
+      header: {}
+      data:
+        driverIds: 5c3da6b3a87b43b380a91a2f338e4ffd
+        instanceId: 
+      code: '1998'
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat: 0
+        networkType: WIFI
+        productName: apitest_autoSub
+        productNodeType: 0
+        sub: true
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+        index: "1"
+        nickname: "apitest_device"
+      code: 200
+    -
+      url: edge/batchBindDeviceToEdgeInstanceWithDriver
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId: 5c3da6b3a87b43b380a91a2f338e4ffd
+        instanceId:
+        deviceKeys:
+        - deviceName: "apitest_device"
+          productKey:
+      code: 200
+    -
+      url: edge/queryEdgeInstanceDevice
+      method: GET
+      header: {}
+      data:
+        instanceId:
+      code: "apitest_device"
+    -
+      url: edge/unbindDriverFromEdgeInstance
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId: 5c3da6b3a87b43b380a91a2f338e4ffd
+        instanceId:
+      code: 409
+    -
+      url: edge/batchSetEdgeInstanceDeviceConfig
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        instanceId:
+        deviceConfigs:
+          - content: '{"clientIp":"1.1.1.1"}'
+            deviceName: "apitest_device"
+            productKey:
+      code: 200
+    -
+      url: edge/batchGetEdgeInstanceDeviceConfig
+      method: GET
+      header: {}
+      data:
+        instanceId:
+        deviceKeys[0].deviceName: "apitest_device"
+        deviceKeys[0].productKey:
+      code: '\"clientIp\":\"1.1.1.1\"'
+    -
+      url: edge/createEdgeInstanceDeployment
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        instanceId:
+        type: deploy
+      code: 409
+    -
+      url: edge/batchClearEdgeInstanceDeviceConfig
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        instanceId:
+        deviceKeys:
+        - deviceName: "apitest_device"
+          productKey:
+      code: 200
+    -
+      url: edge/batchGetEdgeInstanceDeviceConfig
+      method: GET
+      header: {}
+      data:
+        instanceId:
+        deviceKeys[0].deviceName: "apitest_device"
+        deviceKeys[0].productKey:
+      code: "{\"clientIp\":\"1.1.1.1\"}"
+    -
+      url: edge/clearEdgeInstanceDriverConfigs
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        instanceId:
+        driverId: 5c3da6b3a87b43b380a91a2f338e4ffd
+      code: 200
+    -
+      url: edge/batchGetEdgeInstanceDriverConfigs
+      method: GET
+      header: {}
+      data:
+        driverIds: 5c3da6b3a87b43b380a91a2f338e4ffd
+        instanceId: 
+      code: '1998'
+    -
+      url: edge/batchUnbindDeviceFromEdgeInstance
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        instanceId:
+        deviceKeys: 
+        - deviceName: "apitest_device"
+          productKey:
+      code: 200
+    -
+      url: edge/queryEdgeInstanceDevice
+      method: GET
+      header: {}
+      data:
+        instanceId:
+      code: "apitest_device"
+    -
+      url: edge/unbindDriverFromEdgeInstance
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId: 5c3da6b3a87b43b380a91a2f338e4ffd
+        instanceId:
+      code: 200
+    -
+      url: edge/queryEdgeInstanceDriver
+      method: GET
+      header: {}
+      data:
+        instanceId:
+      code: 5c3da6b3a87b43b380a91a2f338e4ffd
+    -
+      url: edge/createEdgeInstanceDeployment
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        instanceId:
+        type: deploy
+      code: 409

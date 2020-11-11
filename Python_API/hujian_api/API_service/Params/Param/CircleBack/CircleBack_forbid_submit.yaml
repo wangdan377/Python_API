@@ -1,0 +1,17 @@
+---
+Circle_forbid_submit:
+  dec: '圈子封禁提交'
+  parameters:
+    -
+      url: /circle/forbidSubmit
+      data:
+        -
+          circleId:
+          forbiddenReason:
+          forbiddenDetails:
+          forbiddenPeriodStart:
+          forbiddenPeriodEnd:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

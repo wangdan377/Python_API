@@ -1,0 +1,16 @@
+---
+Follow_getUserFollowList:
+  dec: '获取用户关注列表'
+  parameters:
+    -
+      url: /v1/user/get_follows
+      data:
+        -
+         userId*: 13418483933@139.com
+         page:
+         pageSize:
+         token:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

@@ -1,0 +1,14 @@
+---
+Login_foreign:
+  dec: '提供qq,weibo等第三方登录'
+  parameters:
+    -
+      url: /v1/sforeignlogin
+      data:
+        -
+          platform*:
+          authData*: 13418483933@139.com
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

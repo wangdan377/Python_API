@@ -1,0 +1,10 @@
+---
+Attendance_analyse:
+  dec: 'get 分析考勤'
+  parameters:
+    -
+      url: 172.16.2.101:4000/api/attendance/analyse?startDate=2019-10-01 00:00:00&endDate=2019-10-31 00:00:00&userIds=01694950111182631,293210194326475830
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

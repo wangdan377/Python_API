@@ -1,0 +1,13 @@
+---
+Official_homepage:
+  dec: '官网主页'
+  parameters:
+    -
+      url: /v1/page/web_mainpage
+      data:
+        -
+          lang: 13418483933@139.com
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

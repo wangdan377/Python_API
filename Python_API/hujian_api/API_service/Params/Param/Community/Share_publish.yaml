@@ -1,0 +1,26 @@
+---
+Share_publish:
+  dec: '发布分享'
+  parameters:
+    -
+      url: /v1/share/post/publish
+      data:
+        -
+          token: 13418483933@139.com
+          postID:
+          sourceUrls:
+          sourceType:
+          des:
+          title:
+          mail:
+          tags:
+          deviceTags:
+          activityId:
+          duration:
+          platform:
+          geo:
+          circleId:
+    header: {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+              Gecko/20100101 Firefox/71.0"
+            }

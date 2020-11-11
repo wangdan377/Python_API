@@ -1,0 +1,15 @@
+---
+Aliyun_queryfile:
+  dec: '提供阿里云视频转码是否完成的查询功能，如果同时跨域移动回源Bucket'
+  parameters:
+    -
+      url: /site/queryfile
+      data:
+        -
+          fromBucket*:
+          inputObject*:
+          outputObject*:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

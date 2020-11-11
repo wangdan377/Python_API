@@ -1,0 +1,14 @@
+---
+APP_get_allModelType:
+  dec: '所有设备型号查询'
+  parameters:
+    -
+      url: /v1/app/get_all_model
+      data:
+        -
+          page: 13418483933@139.com
+          pageSize:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

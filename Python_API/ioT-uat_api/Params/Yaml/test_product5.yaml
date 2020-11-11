@@ -1,0 +1,60 @@
+---
+ProductTest05:
+  dec: "create-binddriver-getproductdriver-unbind-delete"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: product/bindDriver
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        driverId: "54a69c88583045619c262a6bbef8305f"
+      code: 200
+    -
+      url: product/listProductBundledDriver
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code: "54a69c88583045619c262a6bbef8305f"
+    -
+      url: product/unbindDriver
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        driverId: "54a69c88583045619c262a6bbef8305f"
+      code: 200
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: product/get
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code: 409

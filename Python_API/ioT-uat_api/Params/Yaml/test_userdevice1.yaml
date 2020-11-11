@@ -1,0 +1,115 @@
+---
+userDeviceTest01:
+  dec: "createpro-createdevice-userlogin-binduser-updatedevice-updatenickname-getdevice-unbinddevice-deletedevice-deletepro"
+  parameters:
+    -
+      url: https://oauthuat.utcook.com/uaa/oauth/login
+      method: POST
+      header: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": "Basic c3NvLWdhdGV3YXk6c3NvLWdhdGV3YXktc2VjcmV0"
+              }
+      data: 
+        username: iot_owner_test
+        password: Ut123456
+        grand_type: password       
+      code: 200
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+        index: "1"
+        nickname: "apitest_device"
+      code: 200
+    -
+      url: deviceOwner/bind
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+        deviceSecret: 
+      code: 200
+    -
+      url: deviceOwner/batchUpdate
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        updateDeviceInfos:
+          - deviceName: "apitest_device"
+            productKey:
+            index: 3
+      code: 200
+    -
+      url: deviceOwner/batchUpdateNickname
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        updateDeviceNicknameInfos:
+          - deviceName: "apitest_device"
+            productKey:
+            nickname: nicknametest
+      code: 200
+    -
+      url: deviceOwner/get
+      method: GET
+      header: {}
+      data:
+        deviceName: "apitest_device"
+        productKey:
+      code: 
+        - '"index":3'
+        - 'nicknametest'
+    -
+      url: deviceOwner/unbind
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        deviceName: "apitest_device"
+        productKey:
+      code: 200
+    -
+      url: device/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: 200
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200

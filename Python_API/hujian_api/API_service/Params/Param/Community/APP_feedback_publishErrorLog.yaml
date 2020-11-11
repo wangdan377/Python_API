@@ -1,0 +1,21 @@
+---
+APP_feedback_publishErrorLog:
+  dec: '上传作品发布失败信息/日志'
+  parameters:
+    -
+      url: /v1/add_app_share_post_publish_log
+      data:
+        -
+          userId: 13418483933@139.com
+          postId:
+          phoneid:
+          version:
+          reason*:
+          reasonCode*:
+          sourceUrl1:
+          sourceUrl2:
+          failAt:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

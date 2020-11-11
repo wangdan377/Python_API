@@ -1,0 +1,10 @@
+---
+Camera_title_list:
+  dec: '稳定器品牌列表'
+  parameters:
+    -
+      url: /camera/productTitleList
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

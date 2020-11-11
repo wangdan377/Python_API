@@ -1,0 +1,13 @@
+---
+Camera_lenseData_query:
+  dec: '相机镜头编辑回显'
+  parameters:
+    -
+      url: /camera/cameraLenseDataQuery
+      data:
+        -
+         id:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

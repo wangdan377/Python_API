@@ -1,0 +1,16 @@
+---
+School_art_list_getByUserid:
+  dec: '学院个人作品列表'
+  parameters:
+    -
+      url: /v1/school/list_by_userid
+      data:
+        -
+          page: 13418483933@139.com
+          pageSize:
+          userId*:
+          token:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

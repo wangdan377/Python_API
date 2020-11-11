@@ -1,0 +1,162 @@
+---
+ProductTest03:
+  dec: "createpro-createdevice-delete-update-release-update-delete-tags-fulltags-cancelrelease-update-delete-delete-delete-search"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_productdevice03"
+        index: "1"
+        nickname: "apitest_productdevice03"
+      code: 200
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 409
+    -
+      url: product/update
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        productName: "apitest_auto_new3" 
+        productType: "newtype"
+        productGroup: "newgroup"
+        description: "newdescription"
+        imageKey: "avatar"
+      code: 200
+    -
+      url: product/releaseProduct
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: product/update
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        productName: "apitest_auto_new3_" 
+        productType: "newtype"
+        productGroup: "newgroup"
+        description: "newdescription"
+        imageKey: "avatar"
+      code: 409
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 409
+    -
+      url: product/incrementalUpdateTags
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        tagList: [{"tagKey":"apitag1","tagValue":"apivalue1"},{"tagKey":"apitag2","tagValue":"apivalue2"}]
+      code: 200
+    -
+      url: product/fullUpdateTags
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        tagList: [{"tagKey":"apitag3","tagValue":"apivalue3"},{"tagKey":"apitag4","tagValue":"apivalue4"}]
+      code: 200
+    -
+      url: product/cancelReleaseProduct
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: product/update
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        productName: "apitest_auto_new3_" 
+        productType: "newtype"
+        productGroup: "newgroup"
+        description: "newdescription"
+        imageKey: "avatar"
+      code: 200
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 409
+    -
+      url: device/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_productdevice03"
+      code: 200
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: product/get
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code: 409

@@ -1,0 +1,14 @@
+---
+Notify_readCount:
+  dec: '消息阅读数量'
+  parameters:
+    -
+      url: /v1/push/add_read_count
+      data:
+        -
+          token*: 13418483933@139.com
+          notifyId*:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

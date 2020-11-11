@@ -1,0 +1,96 @@
+---
+DriverTest01:
+  dec: "uploadfile-createdriver-binddriver-updatedriver-deletedriver-unbinddriver-deletedriver-getdriver"
+  parameters:
+    -
+      url: https://mobileuat.utcook.com/smallfile/qiniu/server_upload
+      method: POST
+      header: {
+              }
+      data:
+        fileName: testdriverfile
+        appKey: developer
+        isPrivateBucket: false
+      code: 200
+    -
+      url: driver/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverName: autotest_driver
+        driverProtocol: customize
+        runtime: nodejs8
+        description: createdriver
+        builtIn: false
+        fileUrl: 
+      code: 200
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat: 0
+        networkType: WIFI
+        productName: testdriver
+        productNodeType: 0
+        sub: true
+      code: 200
+    -
+      url: product/bindDriver
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        driverId: 
+      code: 200
+    -
+      url: driver/update
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId: 
+        description: newdescription
+      code: 200
+    -
+      url: driver/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId:
+      code: 409
+    -
+      url: product/unbindDriver
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        driverId: 
+      code: 200
+    -
+      url: driver/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        driverId:
+      code: 200
+    -
+      url: driver/get
+      method: GET
+      header: {}
+      data:
+        driverId:
+      code: 409

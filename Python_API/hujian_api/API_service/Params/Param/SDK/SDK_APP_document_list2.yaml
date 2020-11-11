@@ -1,0 +1,15 @@
+---
+SDK_APP_document_list:
+  dec: '参考文档管理列表'
+  parameters:
+    -
+      url: /appsdk/appsdkDocumentList
+      data:
+        -
+          start:
+          limit:
+          lang:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

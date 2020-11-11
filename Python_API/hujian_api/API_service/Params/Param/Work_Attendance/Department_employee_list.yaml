@@ -1,0 +1,72 @@
+---
+Department_employee_list:
+  dec: 'get部门用户列表'
+  parameters:
+    -
+      url: localhost:4000/api/dept/user/list?deptId=118994363
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }
+
+      parameters:
+        url:
+          localhost:4000/api/dept/user/user?depid=11894363
+        header:{
+               "user-agent":  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+               gecko/20100101 firefox/71.0"
+
+              }
+        localhost:4000/api/dept/user/user?depid=1189363
+        header:{
+              "user-agent": "mozilla"/5.0 (windows NT 10.0;win64; x64;rv:71.0\
+              gecko/20100101 firefox/71.0)
+      }
+
+      url:localhost:4000/api/dept/user/list?deptId = 118994363
+      header:{
+             "user-agent": "mozilla"/5.0 (windows NT 10.0;Win64;x64;rv:71.0)\gecko/20100101
+              firefox/71.0
+       }
+
+      url"localhost:4000/api/dept/user/list?depId = 118994363"
+
+      url"localhost:4000/api/dept/user/list?depId = 118994363"
+      url"localhost:4000/api/dept/user/list?depid = 118994363"
+      url"localhost:4000/api/dept/user/list?depid = 118994363"
+      url"localhost:
+
+        url = temp
+        url = temp2
+        id = ios
+        url = andriod
+
+        url = andriod
+
+        url = localhost:4000/api/department =rul = root = localhost =
+        url = localhost:4000/api/department = 118994363
+        url = localhost:4000/api/department = 118994363
+
+        url = localhost:
+        url = "localhost:4000/api/department" =
+        url = loaclhost:
+
+        url = localhost:
+        url = localhost:
+
+        url = localhost:
+        url = localhost:
+
+        url = loacalhost:4000/api/department = 118994363
+
+        url = localhost:
+
+
+
+
+
+
+
+
+
+

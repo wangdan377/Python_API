@@ -1,0 +1,16 @@
+---
+Theme_recommend:
+  dec: '主题精选'
+  parameters:
+    -
+      url: /v1/share/cat/recommend
+      data:
+        -
+          lang: 13418483933@139.com
+          page:
+          pageSize:
+          postLimit:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

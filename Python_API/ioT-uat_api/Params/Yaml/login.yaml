@@ -1,0 +1,17 @@
+---
+Login:
+  dec: "登录"
+  parameters:
+    -
+      url: https://oauthuat.utcook.com/uaa/oauth/login
+      method: POST
+      header: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": "Basic c3NvLWdhdGV3YXk6c3NvLWdhdGV3YXktc2VjcmV0"
+              }
+      data:
+        username: iot_developer_test
+        password: Ut123456
+        grant_type: password
+        scope: read
+

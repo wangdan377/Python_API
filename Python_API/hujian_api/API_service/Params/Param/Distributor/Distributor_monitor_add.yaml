@@ -1,0 +1,26 @@
+---
+Distributor_monitor_add:
+  dec: '新增监控规则接口'
+  parameters:
+    -
+      url: v1/monitor/add
+      data:
+        -
+          token: 13418483933@139.com
+          name:
+          agentList:
+          ruleList:
+          rate:
+          type:
+          expression:
+          formula:
+          quota:
+          operator:
+          correction:
+          ruleRelation:
+          status:
+          email:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

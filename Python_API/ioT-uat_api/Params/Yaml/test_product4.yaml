@@ -1,0 +1,49 @@
+---
+ProductTest04:
+  dec: "create-createtopic-gettopic-delete-search"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: ruleEngine/createTransferTargetTopicForProduct
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: ruleEngine/hasTransferTargetTopicOfProduct
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code: 200
+    -
+      url: product/delete
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: product/get
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code: 409

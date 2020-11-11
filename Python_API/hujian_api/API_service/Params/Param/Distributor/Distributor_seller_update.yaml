@@ -1,0 +1,24 @@
+---
+Distributor_seller_update:
+  dec: '经销商的新增和编辑'
+  parameters:
+    -
+      url: https://distributor_api.zhiyun-tech.com/v1/seller/agent/update
+      data:
+        -
+          token: 13418483933@139.com
+          id:
+          agentNo*:
+          userId*:
+          name*:
+          country:
+          region:
+          address:
+          phone:
+          mail:
+          url:
+          isfixed:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

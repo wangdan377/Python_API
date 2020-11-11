@@ -1,0 +1,16 @@
+---
+Register:
+  dec: '提供手机号或邮箱的注册'
+  parameters:
+    -
+      url: /v1/register
+      data:
+        -
+          username*:
+          password*: 13418483933@139.com
+          vcode:
+          adnotification:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

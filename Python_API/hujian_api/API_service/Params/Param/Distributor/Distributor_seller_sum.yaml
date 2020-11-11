@@ -1,0 +1,23 @@
+---
+Distributor_seller_sum:
+  dec: '经销商销售统计接口'
+  parameters:
+    -
+      url: v1/reseller/query_sn
+      data:
+        -
+          token: 13418483933@139.com
+          agentNo:
+          start:
+          limit:
+          orderBy:
+          desc:
+          q:
+          type:
+          dateType:
+          dateStart:
+          dateEnd:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

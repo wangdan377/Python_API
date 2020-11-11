@@ -1,0 +1,18 @@
+---
+APP_feedback_mobileInfo:
+  dec: '上传android设备信息'
+  parameters:
+    -
+      url: /v1/app/upload_model_feedback
+      data:
+        -
+          userId: 13418483933@139.com
+          retailBranding:
+          marketingName:
+          model:
+          phoneId:
+          camera:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

@@ -1,0 +1,118 @@
+---
+DeviceTest05:
+  dec: "createpro-createdevice-getmodelprofile-createevent-releaseproduct-setevent-getevent-batchsetevent-getevent-deletedevice-deletepro"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: apitest_device
+        index: 1
+        nickname: apitest_device
+      code: 200
+    -
+      url: product/get
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code:
+    -
+      url: https://mobileuat.utcook.com/utmodel/modelDeveloper/findProfile
+      method: GET
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        category: ut-device
+        identifier:
+      code: ut-device
+    -
+      url: https://mobileuat.utcook.com/utmodel/modelServiceDeveloper/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        modelId: 
+        identifier: api_int
+        name: api_int
+        callType: async
+        inputData: []
+        outputData: []
+      code: 200
+    -
+      url: product/releaseProduct
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: device/invokeThingService
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        deviceName: apitest_device       
+        productKey:
+        identifier: api_int
+        args: "{}"
+      code: 409
+    -
+      url: device/queryServiceData
+      method: GET
+      header: {}
+      data:
+        productKey:
+        deviceName: apitest_device
+        asc: 0
+        pageSize: 100
+        startTime: 
+        endTime: 
+      code: '\"code\":200'
+    -
+      url: device/invokeThingsService
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        deviceNames: 
+        - apitest_device       
+        productKey:
+        identifier: api_int
+        args: "{}"
+      code: 200
+    -
+      url: device/queryServiceData
+      method: GET
+      header: {}
+      data:
+        productKey:
+        deviceName: apitest_device
+        asc: 0
+        pageSize: 100
+        startTime: 
+        endTime: 
+      code: '\"code\":200'

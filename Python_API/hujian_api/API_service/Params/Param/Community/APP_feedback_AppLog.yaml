@@ -1,0 +1,22 @@
+---
+APP_feedback_AppLog:
+  dec: '上传app产品设备使用记录'
+  parameters:
+    -
+      url: /v1/app/add_app_production_info
+      data:
+        -
+          userId: 13418483933@139.com
+          phoneid:
+          model:
+          deviceid:
+          longitude:
+          latitude:
+          serial_num:
+          camera:
+          bts:
+          ets:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

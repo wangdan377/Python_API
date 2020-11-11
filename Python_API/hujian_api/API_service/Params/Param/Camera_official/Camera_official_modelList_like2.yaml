@@ -1,0 +1,15 @@
+---
+Camera_official_modelList_like2:
+  dec: '相机型号列表2(模糊查询)'
+  parameters:
+    -
+      url: /v1/camera/cameraModelListLike2
+      data:
+        -
+         cameraModel:
+         productTitle:
+         productModel:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

@@ -1,0 +1,13 @@
+---
+Camera_LenseSupport_edit_query_groupByCameraModel:
+  dec: '相机镜头绑定编辑回显(改版通过cameraModel聚合)'
+  parameters:
+    -
+      url: /camera/cameraLenseSupportGroupByCameraModelEditQuery
+      data:
+        -
+         cameraModel:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

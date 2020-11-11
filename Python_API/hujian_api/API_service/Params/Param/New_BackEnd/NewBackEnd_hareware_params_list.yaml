@@ -1,0 +1,20 @@
+---
+NewBackEnd_hareware_params_list:
+  dec: '硬件列表 '
+  parameters:
+    -
+      url: /product/productParamsList
+      data:
+        -
+          startdate:
+          enddate:
+          start:
+          limit:
+          channel:
+          q:
+          sort:
+          needFunction:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

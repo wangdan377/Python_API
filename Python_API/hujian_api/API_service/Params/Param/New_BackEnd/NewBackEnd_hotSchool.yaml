@@ -1,0 +1,16 @@
+---
+NewBackEnd_hotSchool:
+  dec: ' 内容中心.内容热门课程 '
+  parameters:
+    -
+      url: /school/hotSchool
+      data:
+        -
+          start:
+          limit:
+          startdate:
+          enddate:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

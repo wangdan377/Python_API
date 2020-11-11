@@ -1,0 +1,18 @@
+---
+Camera_official_lenseModelList_like:
+  dec: '相机镜头型号列表(模糊查询)'
+  parameters:
+    -
+      url: /v1/camera/LenseModelListLike
+      data:
+        -
+         cameraLense:
+         productTitle:
+         productModel:
+         cameraBrand:
+         cameraModel:
+         cameraLenseBrand:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

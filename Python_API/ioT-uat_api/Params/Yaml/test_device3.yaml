@@ -1,0 +1,65 @@
+---
+DeviceTest03:
+  dec: "createpro-createdevice-updatetags-fullupdatetag-gettag-deletedevice-deletepro"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+        index: "1"
+        nickname: "apitest_device"
+      code: 200
+    -
+      url: device/updateTags
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        productKey:
+        deviceName: "apitest_device"
+        tagMap:
+          apitagKey1: apitagValue1
+          apitagKey2: apitagValue2       
+      code: 200
+    -
+      url: device/fullUpdateTags
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        productKey:
+        deviceName: "apitest_device"
+        tagMap:
+          apitagKey3: apitagValue3
+          apitagKey4: apitagValue4      
+      code: 200
+    -
+      url: device/listTags
+      method: GET
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: "apitest_device"
+      code: apitagValue3

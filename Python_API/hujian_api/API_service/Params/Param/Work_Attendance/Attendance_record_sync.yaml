@@ -1,0 +1,10 @@
+---
+Attendance_record_sync:
+  dec: 'get同步员工打卡记录'
+  parameters:
+    -
+      url: localhost:4000/api/attendance/record/sync?force=1&date=2019-11
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

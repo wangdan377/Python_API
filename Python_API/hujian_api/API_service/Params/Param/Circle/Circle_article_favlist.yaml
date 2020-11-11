@@ -1,0 +1,15 @@
+---
+Circle_article_favlist:
+  dec: '圈子文章收藏列表（整合入学院文章的收藏列表'
+  parameters:
+    -
+      url: /v1/circle/favList
+      data:
+        -
+          page:
+          pageSize:
+          token:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

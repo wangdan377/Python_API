@@ -1,0 +1,19 @@
+---
+NewBackEnd_package_list:
+  dec: '安装包列表 '
+  parameters:
+    -
+      url: /version/packageList
+      data:
+        -
+          startdate:
+          enddate:
+          start:
+          limit:
+          q:
+          sort:
+          product:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

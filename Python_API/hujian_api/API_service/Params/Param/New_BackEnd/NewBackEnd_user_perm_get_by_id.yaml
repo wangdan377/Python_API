@@ -1,0 +1,16 @@
+---
+NewBackEnd_user_perm_get_by_id:
+  dec: '账号设置.账号新增用户 '
+  parameters:
+    -
+      url: /user/perm_get_by_id
+      data:
+        -
+          username*:
+          password*:
+          vcode:
+          role*   :
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

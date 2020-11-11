@@ -1,0 +1,22 @@
+---
+NewBackEnd_course_list:
+  dec: ' 内容中心.内容课程列表  '
+  parameters:
+    -
+      url: /school/course/courseList
+      data:
+        -
+          startdate:
+          enddate:
+          start:
+          limit:
+          q:
+          type:
+          status:
+          ablbumId:
+          platform:
+          sort:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

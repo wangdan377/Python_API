@@ -1,0 +1,18 @@
+---
+Verifyvcode_send:
+  dec: '发送验证码'
+  parameters:
+    -
+      url: /v1/sendvcode
+      data:
+        -
+          to*: 13418483933@139.com
+          lang:
+          geetest_challenge*:
+          geetest_validate*:
+          geetest_seccode*:
+          checkExist:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

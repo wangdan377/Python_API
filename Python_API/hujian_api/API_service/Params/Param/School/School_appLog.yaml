@@ -1,0 +1,17 @@
+---
+School_appLog:
+  dec: '上传app使用信息'
+  parameters:
+    -
+      url: /v1/app/add_usage_log
+      data:
+        -
+          userId*: 13418483933@139.com
+          startAt*:
+          endAt:
+          platform:
+          production:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

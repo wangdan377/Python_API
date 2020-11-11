@@ -1,0 +1,15 @@
+---
+Message_chat_privateList:
+  dec: '私信对话列表'
+  parameters:
+    -
+      url: /v1/notify/message_chat_list
+      data:
+        -
+          token*: 13418483933@139.com
+          page:
+          pageSize:
+      header: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                Gecko/20100101 Firefox/71.0"
+              }

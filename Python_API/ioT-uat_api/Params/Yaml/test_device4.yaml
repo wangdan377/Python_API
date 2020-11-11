@@ -1,0 +1,133 @@
+---
+DeviceTest04:
+  dec: "createpro-createdevice-getmodelprofile-createproperty-releaseproduct-setproperty-getproperty-batchsetproperty-getproperty-setdesiredproperty-getdesiredproperty-deletedevice-deletepro"
+  parameters:
+    -
+      url: product/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        dataFormat:
+        networkType:
+        productName:
+        productNodeType:
+        sub:
+      code: 200
+    -
+      url: device/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: apitest_device
+        index: 1
+        nickname: apitest_device
+      code: 200
+    -
+      url: product/get
+      method: GET
+      header: {}
+      data:
+        productKey:
+      code:
+    -
+      url: https://mobileuat.utcook.com/utmodel/modelDeveloper/findProfile
+      method: GET
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        category: ut-device
+        identifier:
+      code: ut-device
+    -
+      url: https://mobileuat.utcook.com/utmodel/modelPropertyDeveloper/create
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        modelId: 
+        identifier: api_int
+        name: api_int
+        accessMode: rw
+        dataType:
+          specs:
+            min: 1
+            max: 100
+            step: 1
+          type: int      
+      code: 200
+    -
+      url: product/releaseProduct
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+      code: 200
+    -
+      url: device/setDeviceProperty
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        deviceName: apitest_device       
+        items: '{"api_int":99}'
+        productKey:
+      code: 409
+    -
+      url: device/queryDeviceProperty
+      method: GET
+      header: {}
+      data:
+        productKey:
+        deviceName: apitest_device
+      code: '"value":"99"'
+    -
+      url: device/setDevicesProperty
+      method: POST
+      header: {
+                "Content-Type": "application/json"
+              }
+      data: 
+        deviceNames:
+        - apitest_device
+        productKey:
+        items: '{"api_int":98}'
+      code: 200
+    -
+      url: device/queryDeviceProperty
+      method: GET
+      header: {}
+      data:
+        productKey:
+        deviceName: apitest_device
+      code: '"value":"98"'
+    -
+      url: device/setDesiredProperty
+      method: POST
+      header: {
+               "Content-Type": "application/json"
+              }
+      data:
+        productKey:
+        deviceName: apitest_device
+        versions: '{"api_int":0}'
+        items: '{"api_int":97}'
+      code: 200
+    -
+      url: device/queryDesiredProperty
+      method: GET
+      header: {}
+      data: 
+        deviceName: apitest_device
+        productKey:
+        identifiers: api_int
+      code: "\"version\":1"

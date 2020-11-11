@@ -1,0 +1,17 @@
+---
+Distributor_user_query:
+  dec: '账号信息查询 '
+  parameters:
+    -
+      url: v1/user/query
+      data:
+        -
+          token: 13418483933@139.com
+          q:
+          isPagi:
+          start:
+          limit:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }

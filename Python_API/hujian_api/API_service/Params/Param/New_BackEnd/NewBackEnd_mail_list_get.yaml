@@ -1,0 +1,20 @@
+---
+NewBackEnd_mail_list_get:
+  dec: '邮箱列表 '
+  parameters:
+    -
+      url: /noticeMail/mailget
+      data:
+        -
+          startdate:
+          enddate:
+          start:
+          limit:
+          q:
+          code:
+          status:
+          sort:
+      header: {
+                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0)\
+                  Gecko/20100101 Firefox/71.0"
+              }
